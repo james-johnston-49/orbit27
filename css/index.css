@@ -1,0 +1,221 @@
+/* =========================================================
+   index.css
+   Homepage styles: hero section + placeholder content below.
+   Relies on variables set in main.css.
+
+   NOTE: the logo (assets/logo/logo.png) already contains the
+   ring, "ORBIT 27" wordmark, and "CAFÉ & BAKERY" label baked
+   into the artwork — so this file does NOT redraw any of that,
+   it just places the image and adds the tagline + CTA under it.
+   ========================================================= */
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    120% 90% at 50% 38%,
+    var(--deep-orbit) 0%,
+    #0a1628 65%,
+    #060d18 100%
+  );
+  color: var(--cream);
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 1.5rem 5rem;
+  max-width: 640px;
+}
+
+/* ---------- logo + ship ---------- */
+.planet-wrap {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin-bottom: 2.3rem;
+}
+
+.planet {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ship {
+  position: absolute;
+  top: 8%;
+  right: -6%;
+  width: 46px;
+}
+
+/* ---------- tagline + CTA ---------- */
+.tagline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  color: var(--space-white);
+  margin: 0 0 2.3rem;
+}
+
+/* ---------- scroll cue ---------- */
+.scroll-cue {
+  margin-top: 2.5rem;
+  width: 22px;
+  height: 36px;
+  border: 2px solid var(--cream);
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  opacity: 0.7;
+}
+.scroll-cue span {
+  width: 4px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--cream);
+}
+
+/* ================= LIGHT CONTENT SECTION ================= */
+.site-content {
+  background: var(--space-white);
+  color: var(--deep-orbit);
+}
+
+.site-content section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.site-content h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin: 0 0 1.2rem;
+}
+
+/* generic placeholder block — swap for real <img> tags later */
+.placeholder-img {
+  background: rgba(35, 74, 120, 0.08);
+  border: 1px dashed rgba(35, 74, 120, 0.3);
+  color: var(--deep-orbit);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  border-radius: 12px;
+}
+.placeholder-img--square {
+  min-height: 160px;
+}
+
+/* ---------- about teaser ---------- */
+.about-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.about-teaser__text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.text-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--orbit-blue);
+}
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- featured menu ---------- */
+.featured-menu {
+  text-align: center;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0 2.5rem;
+  text-align: left;
+}
+.menu-card h3 {
+  margin: 1rem 0 0.3rem;
+  font-size: 1.1rem;
+}
+.menu-card p {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.menu-card .price {
+  font-weight: 600;
+  color: var(--orbit-gold);
+}
+
+.cta--outline {
+  background: transparent;
+  border: 2px solid var(--orbit-blue);
+  color: var(--orbit-blue);
+  box-shadow: none;
+}
+.cta--outline:hover {
+  background: var(--orbit-blue);
+  color: var(--cream);
+}
+
+/* ---------- gallery teaser ---------- */
+.gallery-teaser {
+  text-align: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ---------- visit teaser ---------- */
+.visit-teaser {
+  text-align: center;
+  background: var(--cream);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 0 auto 5rem;
+  padding: 4rem 1.5rem;
+}
+.visit-teaser p {
+  margin: 0 0 1.5rem;
+  opacity: 0.8;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 720px) {
+  .about-teaser {
+    grid-template-columns: 1fr;
+  }
+  .menu-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .planet-wrap {
+    width: 190px;
+    height: 190px;
+  }
+  .ship {
+    width: 34px;
+  }
+}

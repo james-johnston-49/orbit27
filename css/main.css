@@ -1,0 +1,85 @@
+/* =========================================================
+   main.css
+   Shared across every page: variables, resets, base type,
+   and reusable components (buttons, etc.)
+   ========================================================= */
+
+:root {
+  /* ---- brand colours ---- */
+  --orbit-blue: #4d7fb3;
+  --deep-orbit: #234a78;
+  --orbit-gold: #c9a04a;
+  --cream: #fff9ef;
+  --space-white: #f8fbff;
+
+  /* ---- type ---- */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Fraunces", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-display);
+  color: var(--deep-orbit);
+  background: var(--cream);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- reusable button ---------- */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--orbit-gold);
+  color: var(--deep-orbit);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 0.9rem 1.9rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -10px rgba(0, 0, 0, 0.55);
+}
+.cta:focus-visible {
+  outline: 2px solid var(--space-white);
+  outline-offset: 3px;
+}
+.cta svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

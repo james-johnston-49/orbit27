@@ -1,24 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orbit 27</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbit 27 — A café between worlds.</title>
 
-<body>
-<main>
-    <header>
-        <h1>Orbit 27</h1>
-    </header>
-    
-    <section>
-        <h2>Welcome to Orbit 27</h2>
-        <p>Experience the best dining in the whole galaxy!</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <button>Start Dining</button>
+    <!-- main.css = shared styles used across every page -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- index.css = styles only for this page (hero + homepage content) -->
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-inner">
+        <!-- your logo already contains the ring + wordmark + "café & bakery",
+           so it's the whole visual on its own — no need to redraw those in HTML -->
+        <div class="planet-wrap">
+          <img
+            class="planet"
+            src="../assets/logo/logo.png"
+            alt="Orbit 27 — Café & Bakery"
+          />
+          <img
+            class="ship"
+            src="../assets/ships-satellites/ship_sidesC.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+
+        <!-- this line isn't in the logo art, so it stays as real HTML text -->
+        <p class="tagline">A café between worlds.</p>
+
+        <a class="cta" href="menu.html">
+          Explore Menu
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+
+        <!-- scroll cue: hints there's more content below the fold -->
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>
+        </div>
+      </div>
     </section>
+    <!-- ================= /HERO ================= -->
 
-</main>
-</body>
+    <!-- ================= REST OF HOMEPAGE (light section) ================= -->
+    <main class="site-content">
+      <!-- ---- About teaser ---- -->
+      <section class="about-teaser">
+        <div class="placeholder-img">Image placeholder</div>
+        <div class="about-teaser__text">
+          <h2>Welcome to Orbit 27</h2>
+          <p>
+            Placeholder copy — a short paragraph introducing the café, its
+            story, and what makes it feel like a stop between worlds.
+          </p>
+          <a class="text-link" href="about.html">Read our story →</a>
+        </div>
+      </section>
+
+      <!-- ---- Featured menu items ---- -->
+      <section class="featured-menu">
+        <h2>Featured on the Menu</h2>
+        <div class="menu-grid">
+          <div class="menu-card">
+            <div class="placeholder-img placeholder-img--square">
+              Image placeholder
+            </div>
+            <h3>Item name</h3>
+            <p>Short description placeholder.</p>
+            <span class="price">$0.00</span>
+          </div>
+          <div class="menu-card">
+            <div class="placeholder-img placeholder-img--square">
+              Image placeholder
+            </div>
+            <h3>Item name</h3>
+            <p>Short description placeholder.</p>
+            <span class="price">$0.00</span>
+          </div>
+          <div class="menu-card">
+            <div class="placeholder-img placeholder-img--square">
+              Image placeholder
+            </div>
+            <h3>Item name</h3>
+            <p>Short description placeholder.</p>
+            <span class="price">$0.00</span>
+          </div>
+        </div>
+        <a class="cta cta--outline" href="menu.html">View Full Menu</a>
+      </section>
+
+      <!-- ---- Gallery / atmosphere ---- -->
+      <section class="gallery-teaser">
+        <h2>Inside Orbit 27</h2>
+        <div class="gallery-grid">
+          <div class="placeholder-img">Image placeholder</div>
+          <div class="placeholder-img">Image placeholder</div>
+          <div class="placeholder-img">Image placeholder</div>
+        </div>
+      </section>
+
+      <!-- ---- Visit us / location teaser ---- -->
+      <section class="visit-teaser">
+        <h2>Visit Us</h2>
+        <p>Placeholder address / hours / fictional station location.</p>
+        <a class="cta" href="contact.html">Get Directions</a>
+      </section>
+    </main>
+  </body>
 </html>
